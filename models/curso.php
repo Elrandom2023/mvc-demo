@@ -1,4 +1,5 @@
 <?php
+//Clase = Plantilla => Creamos Objetos
 class Curso{
 
   // Atributo:contenerdor que contiene los datos de la clase

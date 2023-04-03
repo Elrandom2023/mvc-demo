@@ -7,7 +7,7 @@ require_once "../models/curso.php";
 //GET - POST - REQUEST
 if(isset($_POST['operacion'])){
 
-  // Instancia de la clase curso
+  // Instancia de la clase Curso
   $curso = new Curso();
 
   //Idenificar la operacion: listar, insertar, eliminar, buscar, etc.
