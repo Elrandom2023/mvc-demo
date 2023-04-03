@@ -18,8 +18,8 @@
   <div class="container mt-2">
 
     <button type="button" class="btn btn-primary btn-sm" id="cargar-datos">Cargar datos</button>
+    <span id="mensaje-carga" class="d-none">Cargando por favor espere...</span>
     
-    <button type="button" class="btn btn-success btn-sm" id="boton-pruebas">Botón de pruebas</button>
 
     <hr>
     
@@ -58,6 +58,9 @@
     $(document).ready(function (){
 
       function mostrarDatos(){
+        //Mostar mensaje de carga
+        $("#mensaje-carga").removeClass("d-none");
+
         //Comunicación asíncrona/AJAX con el controlador
         $.ajax({
           url: '../controllers/curso.controller.php',
@@ -87,6 +90,9 @@
                 $("#tabla-cursos tbody").append(nuevaFila);
               });
             }
+          },
+          complete: function(){
+            $("#mensaje-carga").addClass("d-none");
           } //Fin success
         }); //Fin Ajax
       } // Fin mostarDatos

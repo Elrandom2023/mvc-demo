@@ -35,7 +35,7 @@ class Curso{
     ],
     [
       "id"        => 5,
-      "nombre"    => "Javadcript",
+      "nombre"    => "Javascript",
       "nivel"     => "Avanzado",
       "precio"    => 350,
       "horas"     => 40
